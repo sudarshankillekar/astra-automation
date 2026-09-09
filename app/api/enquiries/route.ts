@@ -1,5 +1,25 @@
-import { env } from 'cloudflare:workers';
 import { validateLead } from '@/lib/lead';
+
+type D1DatabaseLike = {
+  prepare(query: string): {
+    bind(...values: unknown[]): { run(): Promise<unknown> };
+  };
+};
+
+async function getCloudflareDatabase(): Promise<D1DatabaseLike | null> {
+  if (process.env.VERCEL) return null;
+
+  try {
+    const loadCloudflareWorkers = new Function(
+      'return import("cloudflare:workers")',
+    ) as () => Promise<{ env?: { DB?: D1DatabaseLike } }>;
+    const cloudflareWorkers = await loadCloudflareWorkers();
+    return cloudflareWorkers.env?.DB ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export async function POST(request: Request) {
   const origin = request.headers.get('origin');
   if (origin && origin !== new URL(request.url).origin)
@@ -43,26 +63,33 @@ export async function POST(request: Request) {
     const error = validateLead(data);
     if (error) return Response.json({ error }, { status: 400 });
     const id = crypto.randomUUID();
-    await env.DB.prepare(
-      'INSERT INTO enquiries (id,name,business,phone,email,industry,need,message,created_at) VALUES (?,?,?,?,?,?,?,?,?)',
-    )
-      .bind(
-        id,
-        ...[
-          'name',
-          'business',
-          'phone',
-          'email',
-          'industry',
-          'need',
-          'message',
-        ].map((k) => (data[k] as string).trim()),
-        new Date().toISOString(),
-      )
-      .run();
+    const db = await getCloudflareDatabase();
+    if (db) {
+      await db
+        .prepare(
+          'INSERT INTO enquiries (id,name,business,phone,email,industry,need,message,created_at) VALUES (?,?,?,?,?,?,?,?,?)',
+        )
+        .bind(
+          id,
+          ...[
+            'name',
+            'business',
+            'phone',
+            'email',
+            'industry',
+            'need',
+            'message',
+          ].map((k) => (data[k] as string).trim()),
+          new Date().toISOString(),
+        )
+        .run();
+    }
     return Response.json(
       { reference: id.slice(0, 8).toUpperCase() },
-      { status: 201, headers: { 'Cache-Control': 'no-store' } },
+      {
+        status: db ? 201 : 202,
+        headers: { 'Cache-Control': 'no-store' },
+      },
     );
   } catch {
     return Response.json(
