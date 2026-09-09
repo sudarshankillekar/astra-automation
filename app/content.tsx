@@ -690,9 +690,17 @@ export default function Content() {
             </small>
           </div>
           <div className="project-flow">
-            SCAN QR <ArrowRight /> BROWSE MENU <ArrowRight /> ORDER{' '}
-            <ArrowRight /> KITCHEN <ArrowRight /> BILLING <ArrowRight />{' '}
-            ANALYTICS
+            <span>SCAN QR</span>
+            <ArrowRight aria-hidden="true" />
+            <span>BROWSE MENU</span>
+            <ArrowRight aria-hidden="true" />
+            <span>ORDER</span>
+            <ArrowRight aria-hidden="true" />
+            <span>KITCHEN</span>
+            <ArrowRight aria-hidden="true" />
+            <span>BILLING</span>
+            <ArrowRight aria-hidden="true" />
+            <span>ANALYTICS</span>
           </div>
         </article>
         <article className="project project-gulabi reveal">
