@@ -3,6 +3,7 @@ export const needs = [
   'E-Commerce Website',
   'Business Automation',
   'Custom Software',
+  'Influencer Marketing',
   'Restaurant Solution',
   'Not Sure — Help Me Decide',
 ];
@@ -75,6 +76,21 @@ export const services = [
       'Internal business applications',
     ],
     cta: 'Discuss your idea',
+  },
+  {
+    name: 'Influencer marketing',
+    description:
+      'Creator-led campaigns that help your brand reach the right audience and turn attention into enquiries.',
+    features: [
+      'Influencer discovery',
+      'Campaign strategy',
+      'Content planning',
+      'Brand collaborations',
+      'Launch promotions',
+      'Performance tracking',
+      'Lead generation campaigns',
+    ],
+    cta: 'Plan my campaign',
   },
 ];
 export function validateLead(data: Record<string, unknown>): string | null {

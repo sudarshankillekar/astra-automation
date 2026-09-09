@@ -27,6 +27,7 @@ import {
   LoaderCircle,
   MessageCircle,
   Minus,
+  Users,
 } from 'lucide-react';
 import {
   Select,
@@ -47,7 +48,7 @@ import {
 } from '@/components/ui/table';
 import { CTA, Brand } from './page';
 import { services, industries, needs, validateLead } from '@/lib/lead';
-const serviceIcons = [Globe, ShoppingBag, Workflow, Code2];
+const serviceIcons = [Globe, ShoppingBag, Workflow, Code2, Users];
 const industryIcons = [
   Utensils,
   Sparkles,
