@@ -28,11 +28,16 @@ export function Brand() {
   return (
     <a href="#home" className="brand" aria-label="Astra Automation home">
       <img
-        src="/astra-logo.png"
-        alt="Astra Automation — We build your growth online"
-        width="2172"
-        height="724"
+        src="/astra-mark.png"
+        alt=""
+        aria-hidden="true"
+        width="512"
+        height="512"
       />
+      <span className="brand-copy">
+        <strong>Astra Automation</strong>
+        <small>WE BUILD YOUR GROWTH ONLINE</small>
+      </span>
     </a>
   );
 }

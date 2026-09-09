@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     'https://astra-automation.sudarshankillekar199.chatgpt.site',
   ),
-  icons: { icon: '/favicon.png', apple: '/favicon.png' },
+  icons: { icon: '/favicon-theme.png', apple: '/favicon-theme.png' },
   openGraph: {
     title: 'Astra Automation — Digital systems for business growth',
     description:
