@@ -1225,6 +1225,61 @@ h2 {
 .project-beauty {
   background: linear-gradient(125deg, #191827, #101321);
 }
+.project-oxford {
+  background: linear-gradient(125deg, #18201f, #0d1517);
+  border-color: #3b4b45;
+}
+.project-oxford .project-copy > .eyebrow,
+.project-oxford .project-link {
+  color: #c9b58a;
+}
+.project-oxford .tags span {
+  border-color: #475448;
+  color: #c1c7b7;
+}
+.oxford-visual {
+  background: linear-gradient(145deg, #21302c, #101a1b);
+  padding: 28px 30px 26px 20px;
+}
+.oxford-brand-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.oxford-brand-lockup img {
+  width: 122px;
+  height: 32px;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(0) invert(1);
+  opacity: 0.94;
+}
+.oxford-brand-lockup span {
+  color: #a8b7ad;
+  font-size: 9px;
+  text-align: right;
+  letter-spacing: 0.03em;
+}
+.oxford-gallery {
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 9px;
+  min-height: 315px;
+}
+.oxford-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #526157;
+  filter: saturate(0.82) contrast(1.04);
+}
+.oxford-gallery-main {
+  grid-row: 1 / 3;
+}
 .beauty-mockup {
   min-height: 330px;
   background: #e8e4e8;
@@ -1963,6 +2018,12 @@ footer {
   }
   .beauty-mockup {
     min-height: 280px;
+  }
+  .oxford-visual {
+    padding: 18px 25px 28px;
+  }
+  .oxford-gallery {
+    min-height: 250px;
   }
   .beauty-type {
     font-size: 54px;

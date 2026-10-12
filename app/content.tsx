@@ -778,6 +778,47 @@ export default function Content() {
             <BeautyMockup />
           </div>
         </article>
+        <article className="project project-oxford reveal">
+          <div className="project-copy">
+            <span className="eyebrow">04 / REAL ESTATE & HOSPITALITY</span>
+            <h3>
+              Oxford Seolekar, Kihim
+              <span>A premium property experience, designed to convert interest into enquiries.</span>
+            </h3>
+            <p>
+              A refined real-estate showcase for a luxury Kihim development,
+              created for a leading Pune builder. The experience gives buyers
+              a clear view of the architecture, spaces, amenities and location
+              before they speak with the sales team.
+            </p>
+            <Tags
+              items={[
+                'Luxury property presentation',
+                'Project galleries',
+                'Floor plans',
+                'Amenities showcase',
+                'Location storytelling',
+                'Enquiry-led design',
+                'Mobile-first experience',
+              ]}
+            />
+            <a className="project-link" href="#contact">
+              Build my real-estate website <ArrowUpRight size={19} />
+            </a>
+          </div>
+          <div className="project-visual oxford-visual">
+            <div className="oxford-brand-lockup">
+              <img src="/oxford-kihim/oxford-seolekar-logo.svg" alt="Oxford Seolekar" />
+              <span>Selected real-estate work by Astra Automation</span>
+            </div>
+            <div className="oxford-gallery" aria-label="Oxford Seolekar Kihim project preview">
+              <img className="oxford-gallery-main" src="/oxford-kihim/hero-villa.webp" alt="Oxford Seolekar Kihim villa exterior" />
+              <img src="/oxford-kihim/pool.webp" alt="Oxford Seolekar Kihim pool and landscape" />
+              <img src="/oxford-kihim/lounge.webp" alt="Oxford Seolekar Kihim interior lounge" />
+            </div>
+            <small className="preview-label">Selected project preview · Oxford Seolekar, Kihim</small>
+          </div>
+        </article>
       </section>
       <section className="section industries-section" id="industries">
         <div className="wrap reveal">

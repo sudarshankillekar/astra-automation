@@ -1,0 +1,20 @@
+[
+  {
+    "package": "Launch page",
+    "build": 12000,
+    "annual_including_care": 8000,
+    "first_year_including_care": 20000
+  },
+  {
+    "package": "Business website",
+    "build": 24000,
+    "annual_including_care": 14000,
+    "first_year_including_care": 38000
+  },
+  {
+    "package": "Managed-content",
+    "build": 42000,
+    "annual_including_care": 42200,
+    "first_year_including_care": 84200
+  }
+]

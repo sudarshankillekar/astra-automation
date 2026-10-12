@@ -1,0 +1,26 @@
+[
+  {
+    "file": "astra-launch-vertical.mp4",
+    "duration_seconds": 60,
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "bytes": 7300090,
+    "full_decode": "passed",
+    "audio": "AAC",
+    "video": "H.264"
+  },
+  {
+    "file": "astra-launch-widescreen.mp4",
+    "duration_seconds": 60,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "bytes": 7358440,
+    "full_decode": "passed",
+    "audio": "AAC",
+    "video": "H.264"
+  }
+]
