@@ -675,6 +675,86 @@ i {
     width: calc(100% - 40px);
   }
 }
+
+/* Daylight theme: the page stays dark after 18:00 and becomes light before then. */
+html[data-theme='light'] {
+  --background: #f5f7fb;
+  --foreground: #132033;
+  --popover: #ffffff;
+  --border: #d8e0eb;
+  --primary: #12637e;
+  --accent: #e8f1f6;
+  --muted: #52647a;
+  color-scheme: light;
+}
+html[data-theme='light'] body {
+  background: #f5f7fb;
+  color: #132033;
+}
+html[data-theme='light'] header {
+  background: #ffffffec;
+  border-bottom-color: #dce4ee;
+}
+html[data-theme='light'] .brand {
+  background: linear-gradient(135deg, #ffffff, #edf5f8);
+  border-color: #c6d6e2;
+  box-shadow: 0 10px 26px #20445f14;
+}
+html[data-theme='light'] .brand-copy strong { color: #142339; }
+html[data-theme='light'] .brand-copy small,
+html[data-theme='light'] .nav nav a { color: #607188; }
+html[data-theme='light'] .nav nav a:hover { color: #12637e; }
+html[data-theme='light'] .nav-cta { border-color: #b8c8d8; color: #17324a; }
+html[data-theme='light'] .hero:before { opacity: .35; }
+html[data-theme='light'] .section-title > p,
+html[data-theme='light'] .split-heading > p,
+html[data-theme='light'] p { color: #52647a; }
+html[data-theme='light'] .problem-grid > div,
+html[data-theme='light'] .service-card,
+html[data-theme='light'] .timeline > div,
+html[data-theme='light'] .why-grid > div,
+html[data-theme='light'] .comparison-layout,
+html[data-theme='light'] .contact-form { background: #ffffff; border-color: #d8e2ec; }
+html[data-theme='light'] .problem-grid > div > span,
+html[data-theme='light'] .service-card li,
+html[data-theme='light'] .timeline p,
+html[data-theme='light'] .why-grid p { color: #52647a; }
+html[data-theme='light'] .service-section,
+html[data-theme='light'] .automation-section,
+html[data-theme='light'] .comparison-section,
+html[data-theme='light'] .contact-section { background: #eef3f7; border-color: #d9e3ec; }
+html[data-theme='light'] .problem-answer { background: #e5f1f4; border-color: #bdd9df; }
+html[data-theme='light'] .problem-answer h3,
+html[data-theme='light'] .problem-answer p { color: #17354a; }
+html[data-theme='light'] .project { background: linear-gradient(125deg, #ffffff, #eef4f7); border-color: #cbd8e4; box-shadow: 0 18px 46px #18324a12; }
+html[data-theme='light'] .project-copy h3,
+html[data-theme='light'] .project-copy h3 span { color: #132033; }
+html[data-theme='light'] .project-copy h3 span { color: #52647a; }
+html[data-theme='light'] .project-copy p,
+html[data-theme='light'] .project .tags span { color: #52647a; }
+html[data-theme='light'] .project .tags span { border-color: #b9cad8; }
+html[data-theme='light'] .project-link { color: #12637e; }
+html[data-theme='light'] .industries-section,
+html[data-theme='light'] .footer-top { background: #eaf1f5; border-color: #d5e0e8; }
+html[data-theme='light'] .industry-grid > a { background: #ffffff; border-color: #c9d8e3; color: #17324a; }
+html[data-theme='light'] .industry-grid > a span { color: #17324a; }
+html[data-theme='light'] .workflow-tabs { background: #ffffff; border-color: #d1dce7; }
+html[data-theme='light'] .workflow-tabs button { color: #52647a; }
+html[data-theme='light'] .workflow-tabs button[data-active] { background: #e3f0f4; color: #12637e; }
+html[data-theme='light'] .workflow-layout,
+html[data-theme='light'] .flow-result { background: #ffffff; border-color: #d1dce7; }
+html[data-theme='light'] .contact-form input,
+html[data-theme='light'] .contact-form textarea,
+html[data-theme='light'] .contact-form .form-select { background: #ffffff; border-color: #c5d3df; color: #132033; }
+html[data-theme='light'] .contact-form label,
+html[data-theme='light'] .contact-points span { color: #52647a; }
+html[data-theme='light'] .footer-top h3,
+html[data-theme='light'] .footer-top p,
+html[data-theme='light'] .footer-bottom { color: #52647a; }
+html[data-theme='light'] .footer-top h3 { color: #132033; }
+html[data-theme='light'] .footer-top .brand-copy strong { color: #132033; }
+html[data-theme='light'] .oxford-visual { background: linear-gradient(145deg, #dfe9e7, #f7faf9); }
+html[data-theme='light'] .oxford-brand-lockup span { color: #50645d; }
 @media (max-width: 400px) {
   .system-node small {
     display: none;

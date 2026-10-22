@@ -19,7 +19,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { const hour = new Date().getHours(); document.documentElement.dataset.theme = hour >= 18 ? 'dark' : 'light'; })();`,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

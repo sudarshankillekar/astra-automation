@@ -535,6 +535,12 @@ function ContactForm() {
 }
 export default function Content() {
   useEffect(() => {
+    const syncTheme = () => {
+      document.documentElement.dataset.theme =
+        new Date().getHours() >= 18 ? 'dark' : 'light';
+    };
+    syncTheme();
+    const themeTimer = window.setInterval(syncTheme, 60_000);
     const elements = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(
       (entries) =>
@@ -547,7 +553,10 @@ export default function Content() {
       { threshold: 0.08 },
     );
     elements.forEach((e) => observer.observe(e));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.clearInterval(themeTimer);
+    };
   }, []);
   return (
     <>
