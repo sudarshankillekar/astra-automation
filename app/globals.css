@@ -676,85 +676,6 @@ i {
   }
 }
 
-/* Daylight theme: the page stays dark after 18:00 and becomes light before then. */
-html[data-theme='light'] {
-  --background: #f5f7fb;
-  --foreground: #132033;
-  --popover: #ffffff;
-  --border: #d8e0eb;
-  --primary: #12637e;
-  --accent: #e8f1f6;
-  --muted: #52647a;
-  color-scheme: light;
-}
-html[data-theme='light'] body {
-  background: #f5f7fb;
-  color: #132033;
-}
-html[data-theme='light'] header {
-  background: #ffffffec;
-  border-bottom-color: #dce4ee;
-}
-html[data-theme='light'] .brand {
-  background: linear-gradient(135deg, #ffffff, #edf5f8);
-  border-color: #c6d6e2;
-  box-shadow: 0 10px 26px #20445f14;
-}
-html[data-theme='light'] .brand-copy strong { color: #142339; }
-html[data-theme='light'] .brand-copy small,
-html[data-theme='light'] .nav nav a { color: #607188; }
-html[data-theme='light'] .nav nav a:hover { color: #12637e; }
-html[data-theme='light'] .nav-cta { border-color: #b8c8d8; color: #17324a; }
-html[data-theme='light'] .hero:before { opacity: .35; }
-html[data-theme='light'] .section-title > p,
-html[data-theme='light'] .split-heading > p,
-html[data-theme='light'] p { color: #52647a; }
-html[data-theme='light'] .problem-grid > div,
-html[data-theme='light'] .service-card,
-html[data-theme='light'] .timeline > div,
-html[data-theme='light'] .why-grid > div,
-html[data-theme='light'] .comparison-layout,
-html[data-theme='light'] .contact-form { background: #ffffff; border-color: #d8e2ec; }
-html[data-theme='light'] .problem-grid > div > span,
-html[data-theme='light'] .service-card li,
-html[data-theme='light'] .timeline p,
-html[data-theme='light'] .why-grid p { color: #52647a; }
-html[data-theme='light'] .service-section,
-html[data-theme='light'] .automation-section,
-html[data-theme='light'] .comparison-section,
-html[data-theme='light'] .contact-section { background: #eef3f7; border-color: #d9e3ec; }
-html[data-theme='light'] .problem-answer { background: #e5f1f4; border-color: #bdd9df; }
-html[data-theme='light'] .problem-answer h3,
-html[data-theme='light'] .problem-answer p { color: #17354a; }
-html[data-theme='light'] .project { background: linear-gradient(125deg, #ffffff, #eef4f7); border-color: #cbd8e4; box-shadow: 0 18px 46px #18324a12; }
-html[data-theme='light'] .project-copy h3,
-html[data-theme='light'] .project-copy h3 span { color: #132033; }
-html[data-theme='light'] .project-copy h3 span { color: #52647a; }
-html[data-theme='light'] .project-copy p,
-html[data-theme='light'] .project .tags span { color: #52647a; }
-html[data-theme='light'] .project .tags span { border-color: #b9cad8; }
-html[data-theme='light'] .project-link { color: #12637e; }
-html[data-theme='light'] .industries-section,
-html[data-theme='light'] .footer-top { background: #eaf1f5; border-color: #d5e0e8; }
-html[data-theme='light'] .industry-grid > a { background: #ffffff; border-color: #c9d8e3; color: #17324a; }
-html[data-theme='light'] .industry-grid > a span { color: #17324a; }
-html[data-theme='light'] .workflow-tabs { background: #ffffff; border-color: #d1dce7; }
-html[data-theme='light'] .workflow-tabs button { color: #52647a; }
-html[data-theme='light'] .workflow-tabs button[data-active] { background: #e3f0f4; color: #12637e; }
-html[data-theme='light'] .workflow-layout,
-html[data-theme='light'] .flow-result { background: #ffffff; border-color: #d1dce7; }
-html[data-theme='light'] .contact-form input,
-html[data-theme='light'] .contact-form textarea,
-html[data-theme='light'] .contact-form .form-select { background: #ffffff; border-color: #c5d3df; color: #132033; }
-html[data-theme='light'] .contact-form label,
-html[data-theme='light'] .contact-points span { color: #52647a; }
-html[data-theme='light'] .footer-top h3,
-html[data-theme='light'] .footer-top p,
-html[data-theme='light'] .footer-bottom { color: #52647a; }
-html[data-theme='light'] .footer-top h3 { color: #132033; }
-html[data-theme='light'] .footer-top .brand-copy strong { color: #132033; }
-html[data-theme='light'] .oxford-visual { background: linear-gradient(145deg, #dfe9e7, #f7faf9); }
-html[data-theme='light'] .oxford-brand-lockup span { color: #50645d; }
 @media (max-width: 400px) {
   .system-node small {
     display: none;
@@ -780,6 +701,7 @@ html[data-theme='light'] .oxford-brand-lockup span { color: #50645d; }
     gap: 12px;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -2356,3 +2278,165 @@ footer {
     max-width: none;
   }
 }
+
+/* Daylight theme: warm, editorial surfaces with Astra burgundy and clear contrast. */
+html[data-theme='light'] {
+  --background: #f7f5f2;
+  --foreground: #20212a;
+  --popover: #fffefa;
+  --border: #e3ddd8;
+  --primary: #862044;
+  --accent: #f3e8ec;
+  --muted: #62616a;
+  color-scheme: light;
+}
+html[data-theme='light'] body {
+  background: var(--background);
+  color: var(--foreground);
+}
+html[data-theme='light'] header {
+  background: #fffefaed;
+  border-bottom-color: #e6e0db;
+  box-shadow: 0 5px 24px #33232a0a;
+}
+html[data-theme='light'] .brand {
+  background: linear-gradient(135deg, #fffefa, #f6eef0);
+  border-color: #e6d8dc;
+  box-shadow: 0 8px 22px #4d14200d;
+}
+html[data-theme='light'] .brand-copy strong { color: #24212a; }
+html[data-theme='light'] .brand-copy small,
+html[data-theme='light'] .nav nav a { color: #68646c; }
+html[data-theme='light'] .nav nav a:hover,
+html[data-theme='light'] .project-link { color: #862044; }
+html[data-theme='light'] .nav-cta { border-color: #d5c7cb; color: #392630; background: #fffefa; }
+html[data-theme='light'] .nav-cta:hover,
+html[data-theme='light'] .secondary { background: #f3e8ec; color: #6f1939; border-color: #d9bdc7; }
+html[data-theme='light'] .hero:before {
+  inset: 0 -20vw;
+  opacity: 1;
+  background: radial-gradient(ellipse at 77% 38%, #e6cbd544, transparent 50%), radial-gradient(ellipse at 28% 55%, #dce9ed88, transparent 55%);
+}
+html[data-theme='light'] .eyebrow { color: #8b3152; }
+html[data-theme='light'] .badge { color: #6d2943; border-color: #e0cbd2; background: #fffaf8; }
+html[data-theme='light'] h1 span,
+html[data-theme='light'] .gradient { background: linear-gradient(100deg, #852247, #b04461 65%, #745173); background-clip: text; }
+html[data-theme='light'] .primary {
+  color: #fff;
+  background: linear-gradient(110deg, #8a2147, #a73557);
+  border-color: #8a2147;
+  box-shadow: 0 8px 22px #8522472b;
+}
+html[data-theme='light'] .primary:hover { box-shadow: 0 12px 28px #85224738; }
+html[data-theme='light'] .assurances { color: #65616a; }
+html[data-theme='light'] .assurances svg,
+html[data-theme='light'] .problem-grid svg,
+html[data-theme='light'] .why-grid svg { color: #8a3152; }
+html[data-theme='light'] .system-visual {
+  border: 1px solid #e8e2df;
+  border-radius: 24px;
+  background-image: radial-gradient(circle at 50% 44%, #9e31500d, transparent 28%), radial-gradient(circle at 75% 18%, #a01e520b, transparent 30%), radial-gradient(circle at 18% 73%, #4d8cff0c, transparent 28%), linear-gradient(#64535d0a 1px, transparent 1px), linear-gradient(90deg, #64535d0a 1px, transparent 1px);
+  box-shadow: 0 24px 70px #38232b12;
+}
+html[data-theme='light'] .visual-top,
+html[data-theme='light'] .visual-bottom { color: #746a70; }
+html[data-theme='light'] .core { background: linear-gradient(145deg, #fff, #f3e8ec); border-color: #d8a9bb; color: #8a2147; box-shadow: 0 14px 48px #8a214726, inset 0 1px 0 white; }
+html[data-theme='light'] .core strong { color: #29222a; }
+html[data-theme='light'] .core small { color: #765767; }
+html[data-theme='light'] .core svg { filter: drop-shadow(0 0 10px #a6375960); }
+html[data-theme='light'] .orbit { border-color: #8a31521a; box-shadow: 0 0 28px #8a31520a; }
+html[data-theme='light'] .connections { stroke: #a55d78; opacity: .58; filter: none; }
+html[data-theme='light'] .system-node { background: linear-gradient(115deg, #fffefaF5, #f8f3f1F5); border-color: #ded2d5; box-shadow: 0 10px 26px #39232b14, inset 0 1px 0 white; color: #28242b; }
+html[data-theme='light'] .system-node:hover { border-color: #b66a85; box-shadow: 0 16px 34px #39232b1b; }
+html[data-theme='light'] .system-node > svg { color: #8b3152; filter: none; }
+html[data-theme='light'] .system-node small { color: #71666c; }
+html[data-theme='light'] .strap { background: #eee9e5; border-color: #e4dcd7; }
+html[data-theme='light'] .strap .wrap { color: #51464b; }
+html[data-theme='light'] .muted { color: #777078; }
+html[data-theme='light'] .section-title > p,
+html[data-theme='light'] .split-heading > p,
+html[data-theme='light'] p { color: #62616a; }
+html[data-theme='light'] .problem-grid > div,
+html[data-theme='light'] .service-card,
+html[data-theme='light'] .timeline > div,
+html[data-theme='light'] .why-grid > div,
+html[data-theme='light'] .comparison-layout,
+html[data-theme='light'] .contact-form {
+  background: #fffefa;
+  border-color: #e4deda;
+  box-shadow: 0 10px 32px #34232a0a;
+}
+html[data-theme='light'] .problem-grid > div > span,
+html[data-theme='light'] .service-card li,
+html[data-theme='light'] .timeline p,
+html[data-theme='light'] .why-grid p { color: #62616a; }
+html[data-theme='light'] .service-section,
+html[data-theme='light'] .automation-section,
+html[data-theme='light'] .comparison-section,
+html[data-theme='light'] .contact-section { background: #f0ece8; border-color: #e2dbd6; }
+html[data-theme='light'] .problem-answer { background: linear-gradient(110deg, #f4e9ed, #fffaf7); border-color: #e2c9d2; }
+html[data-theme='light'] .problem-answer h3,
+html[data-theme='light'] .problem-answer p { color: #392630; }
+html[data-theme='light'] .problem-answer > svg { color: #8a2147; }
+html[data-theme='light'] .project { background: linear-gradient(125deg, #fffefa, #f3efec); border-color: #e2d9d4; box-shadow: 0 18px 46px #34232a12; }
+html[data-theme='light'] .project-copy h3,
+html[data-theme='light'] .project-copy h3 span { color: #25232a; }
+html[data-theme='light'] .project-copy h3 span { color: #6b6268; }
+html[data-theme='light'] .project-copy p,
+html[data-theme='light'] .project .tags span { color: #62616a; }
+html[data-theme='light'] .project .tags span { border-color: #d8cbd0; background: #fffaf8; }
+html[data-theme='light'] .project-oxford { background: linear-gradient(125deg, #fffefa, #f0ede6); border-color: #ded5c8; }
+html[data-theme='light'] .project-oxford .project-copy > .eyebrow,
+html[data-theme='light'] .project-oxford .project-link { color: #795b2b; }
+html[data-theme='light'] .project-oxford .tags span { border-color: #d8cbb5; color: #66583f; background: #faf6ee; }
+html[data-theme='light'] .oxford-visual { background: linear-gradient(145deg, #e8e2d5, #f9f6ef); }
+html[data-theme='light'] .oxford-brand-lockup img { filter: none; }
+html[data-theme='light'] .oxford-brand-lockup span { color: #665d4f; }
+html[data-theme='light'] .industries-section,
+html[data-theme='light'] .footer-top { background: #eee9e5; border-color: #e2dbd6; }
+html[data-theme='light'] .industry-grid > a { background: #fffefa; border-color: #e0d8d4; color: #29242b; box-shadow: 0 8px 24px #34232a08; }
+html[data-theme='light'] .industry-grid > a span { color: #29242b; }
+html[data-theme='light'] .industry-grid > a > svg:first-child { color: #8a3152; }
+html[data-theme='light'] .industry-grid > a:hover { border-color: #c594a4; background: #fff8f7; }
+html[data-theme='light'] .industry-more strong { color: #4f464c; }
+html[data-theme='light'] .industry-more > a { color: #842346; }
+html[data-theme='light'] .timeline > div:before { background: linear-gradient(90deg, #c58a9e, #e4d7db); }
+html[data-theme='light'] .step-number { border-color: #d6b8c3; background: #fffaf8; color: #842346; }
+html[data-theme='light'] .workflow-tabs { background: #fffefa; border-color: #e0d7d4; }
+html[data-theme='light'] .workflow-tabs button { color: #625b61; }
+html[data-theme='light'] .workflow-tabs button[data-active] { background: #f1e3e8; color: #842346; }
+html[data-theme='light'] .workflow-layout,
+html[data-theme='light'] .flow-result { background: #fffefa; border-color: #e0d7d4; }
+html[data-theme='light'] .flow-item { background: #f8f5f2; border-color: #e0d7d4; color: #55515a; }
+html[data-theme='light'] .flow-item.engine { background: #f0e6ea; border-color: #d8b9c5; color: #56283b; }
+html[data-theme='light'] .flow-item.lit { background: #e9f2ed; border-color: #b7d1c2; color: #315744; box-shadow: 0 0 16px #6a9a7714; }
+html[data-theme='light'] .flow-number,
+html[data-theme='light'] .flow-item:not(:last-child):after,
+html[data-theme='light'] .workflow-explainer .flow-result { color: #756c72; }
+html[data-theme='light'] .outcomes { border-color: #ded6d2; }
+html[data-theme='light'] .comparison th,
+html[data-theme='light'] .comparison td { border-color: #e3dcd8; }
+html[data-theme='light'] .comparison th { color: #4e444b; }
+html[data-theme='light'] .comparison td { color: #625b61; }
+html[data-theme='light'] .comparison td:last-child,
+html[data-theme='light'] .comparison th:last-child { background: #f2e5ea; color: #76213f; }
+html[data-theme='light'] .comparison caption { color: #736a70; }
+html[data-theme='light'] .big-cta { background: radial-gradient(ellipse at 50% 130%, #e9cad6, transparent 70%), linear-gradient(130deg, #fffefa, #f1e9e7); border-color: #dfcbd1; box-shadow: 0 18px 50px #34232a0c; }
+html[data-theme='light'] .contact-points { color: #5e5960; }
+html[data-theme='light'] .contact-points svg { color: #8a3152; }
+html[data-theme='light'] .contact-form label { color: #514b52; }
+html[data-theme='light'] .contact-form input,
+html[data-theme='light'] .contact-form textarea,
+html[data-theme='light'] .contact-form .form-select { background: #fff; border-color: #ded5d2; color: #29242b; }
+html[data-theme='light'] .contact-form input::placeholder,
+html[data-theme='light'] .contact-form textarea::placeholder { color: #8a8186; }
+html[data-theme='light'] footer { background: #f7f5f2; border-color: #e2dbd6; }
+html[data-theme='light'] .footer-top h3 { color: #29242b; }
+html[data-theme='light'] .footer-top p,
+html[data-theme='light'] .footer-bottom { color: #625b61; }
+html[data-theme='light'] .footer-top .brand-copy strong { color: #24212a; }
+html[data-theme='light'] .footer-tag,
+html[data-theme='light'] .pending-social small { color: #777078; }
+html[data-theme='light'] .footer-top > div > a:not(.brand),
+html[data-theme='light'] .pending-social { color: #5e5960; }
+html[data-theme='light'] .footer-bottom { border-color: #e2dbd6; }
